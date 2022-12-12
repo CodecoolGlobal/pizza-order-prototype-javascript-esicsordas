@@ -13,8 +13,7 @@
             "price": "20 $",
             "allergens": [
                 1,
-                3,
-                9
+                3
             ]
         },
         {
@@ -30,8 +29,7 @@
             "price": "5 $",
             "allergens": [
                 1,
-                3,
-                9
+                3
             ]
         },
         {
@@ -46,9 +44,8 @@
             "period": "day",
             "price": "40 $",
             "allergens": [
-                1,
-                3,
-                9
+                2,
+                5
             ]
         },
         {
@@ -63,9 +60,9 @@
             "period": "day",
             "price": "25 $",
             "allergens": [
-                1,
                 3,
-                9
+                4,
+                5
             ]
         },
         {
@@ -80,9 +77,8 @@
             "period": "hour",
             "price": "25 $",
             "allergens": [
-                1,
-                3,
-                9
+                2,
+                3
             ]
         },
         {
@@ -97,8 +93,7 @@
             "price": "5 $",
             "allergens": [
                 1,
-                3,
-                9
+                3
             ]
         },
         {
@@ -112,10 +107,31 @@
             "period": "month",
             "price": "15 $",
             "allergens": [
-                1,
-                3,
-                9
+                4,
+                5
             ]
+        }
+    ],
+    "allergens": [
+        {
+            "id": 1,
+            "name": "caffeine"
+        },
+        {
+            "id": 2,
+            "name": "mentor"
+        },
+        {
+            "id": 3,
+            "name": "effort"
+        },
+        {
+            "id": 4,
+            "name": "Harry Potter"
+        },
+        {
+            "id": 5,
+            "name": "natural medicine"
         }
     ]
 }
