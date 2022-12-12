@@ -1,0 +1,121 @@
+{
+    "potions": [
+        {
+            "id": "1",
+            "name": "Can't be late",
+            "ingredients": [
+                "Coffee",
+                "Tantrum",
+                "Curiosity",
+                "Mentor sympathy"
+            ],
+            "period": "week",
+            "price": "20 $",
+            "allergens": [
+                1,
+                3,
+                9
+            ]
+        },
+        {
+            "id": "2",
+            "name": "Unlimited Workshop attention",
+            "ingredients": [
+                "Coffee",
+                "Tantrum",
+                "Curiosity",
+                "Adderal medicine"
+            ],
+            "period": "day",
+            "price": "5 $",
+            "allergens": [
+                1,
+                3,
+                9
+            ]
+        },
+        {
+            "id": "3",
+            "name": "Relax for PA",
+            "ingredients": [
+                "Confidence",
+                "Focus",
+                "Valeriana",
+                "Mentor sympathy"
+            ],
+            "period": "day",
+            "price": "40 $",
+            "allergens": [
+                1,
+                3,
+                9
+            ]
+        },
+        {
+            "id": "4",
+            "name": "Built-in debugger",
+            "ingredients": [
+                "Felix felicis",
+                "Focus",
+                "Ginseng",
+                "JavaScript's God tears"
+            ],
+            "period": "day",
+            "price": "25 $",
+            "allergens": [
+                1,
+                3,
+                9
+            ]
+        },
+        {
+            "id": "5",
+            "name": "Mentor Gin",
+            "ingredients": [
+                "Mentor sympathy",
+                "Focus",
+                "Mentor soul",
+                "Hendrick's Gin"
+            ],
+            "period": "hour",
+            "price": "25 $",
+            "allergens": [
+                1,
+                3,
+                9
+            ]
+        },
+        {
+            "id": "6",
+            "name": "No typos",
+            "ingredients": [
+                "Coffee",
+                "Focus",
+                "JavaScript's God tears"
+            ],
+            "period": "day",
+            "price": "5 $",
+            "allergens": [
+                1,
+                3,
+                9
+            ]
+        },
+        {
+            "id": "7",
+            "name": "Free lunch slot",
+            "ingredients": [
+                "Felix felicis",
+                "Speed",
+                "Ginseng"
+            ],
+            "period": "month",
+            "price": "15 $",
+            "allergens": [
+                1,
+                3,
+                9
+            ]
+        }
+    ]
+}
