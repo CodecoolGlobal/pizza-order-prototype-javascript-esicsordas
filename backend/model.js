@@ -1,7 +1,8 @@
-const { readFileSync, readFile } = require("fs");
+//const { readFileSync, readFile } = require("fs");
+const { readFile } = require("fs/promises");
 
-const readPackages = (filePath, word) => {
-    const data = readFileSync(filePath);
+const readPackages = async (filePath, word) => {
+    const data = await readFile(filePath);
     const dataObj = JSON.parse(data);
     return dataObj[word];
 };
