@@ -2,28 +2,38 @@ const potionComponent = ({name, ingredients, period, price, allergens}) => `
 	<div class="potions">
 		<h2>${name}</h2>
 		<h3>${ingredients}</h3>
-		<ul>${period}</ul>
-		<h4>${price}</h4>
-		<h5>${allergens}</h5>
+		<h4>${period}</h4>
+		<h5>${price}</h5>
+		<h6>${allergens}</h6>
 	</div>
 `;
 
-function getData (type){
-    let fullUrl = `http://localhost:3000/api/${type}`;
+function getData (link, action){
+    let fullUrl = `http://localhost:3000/api/${link}`;
     fetch(fullUrl)
         .then((response) => response.json())
         .then((data) =>{
-            test(data)});
+				action (data);
+		})
 }
 
-function test (data){
-	
+function displayData (data){
 	let rootElement = document.getElementById("root");
 	data.map(potion => {
 		rootElement.insertAdjacentHTML("beforeend", potionComponent(potion))
 	})
 }
 
-getData("potions");
+function makeAllergenList (data){
+	console.log("allergének", data);
+	let rootElement = document.getElementById("root");
+	let createLIelement = document.createElement("li");
+	
+}
 
+function main(){
+	getData("potions", displayData);
+	//getData("allergens", makeAllergenList);
+}
 
+main ();
