@@ -13,7 +13,7 @@ const clickEvent = event => {
 }
 
 function getData (link, action){
-    let fullUrl = `http://localhost:3000/api/${link}`;
+    let fullUrl = `/api/${link}`;
     fetch(fullUrl)
         .then((response) => response.json())
         .then((data) =>{
