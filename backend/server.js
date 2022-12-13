@@ -3,7 +3,7 @@ const path = require("path");
 const app = express();
 
 const readPackages = require("./model.js"); 
-const potionPath = path.join(`${__dirname}/potions.json`);
+const potionPath = path.join(__dirname, '..', './backend/potions.json');
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "..", "frontend")));
@@ -16,6 +16,10 @@ app.get("/api/potions", async (req, res) => {
 app.get("/api/allergens",  async (req, res) => {
     const allergens = await readPackages(potionPath, "allergens");
     res.send(JSON.stringify(allergens, null, '\t'));
+})
+
+app.get("/potions/list", async (req, res) => {
+    res.send("Potion list")
 })
 
 app.listen(3000);
