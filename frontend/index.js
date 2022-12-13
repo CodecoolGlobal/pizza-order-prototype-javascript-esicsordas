@@ -15,10 +15,6 @@ function filterClickEvent (event){
 	} 
 }
 
-function selectedAllergens (allergen){
-
-}
-
 function getData (link, action){
     let fullUrl = `/api/${link}`;
     fetch(fullUrl)
@@ -69,23 +65,23 @@ function makeAllergenList (data){
 	
 }
 
+function isString(str) {
+	return str.toUpperCase() !== str.toLowerCase();
+}
+
 function main(){
 	getData("potions", displayData);
 	getData("allergens", makeAllergenList);
-	let selectedAllergens = [];
+	let selectedAllergens = new Set();
 	window.addEventListener("click", event  => {
+		//allergének kezelése
 		let selectedAllergen;
-		console.log(controlString(filterClickEvent(event)));
-		if (controlString(filterClickEvent(event))){
+		if (isString(filterClickEvent(event))){
 			selectedAllergen = filterClickEvent(event);
 		}
-		selectedAllergens.push(selectedAllergen);
+		selectedAllergens.add(selectedAllergen);
 		console.log(selectedAllergens);
 	})
-}
-
-function controlString(str) {
-	return str.toUpperCase() !== str.toLowerCase();
 }
 
 main ();
