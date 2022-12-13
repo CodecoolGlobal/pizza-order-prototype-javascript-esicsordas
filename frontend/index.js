@@ -9,9 +9,10 @@ const potionComponent = ({name, ingredients, period, price, allergens}) => `
 `;
 
 const clickEvent = event => {
-	console.log(event.target);
+	  if (event.target.tagName === 'LI') {
+		event.target.classList.toggle('checked');
+	  }
 }
-
 function getData (link, action){
     let fullUrl = `/api/${link}`;
     fetch(fullUrl)
@@ -30,6 +31,7 @@ function displayData (data){
 
 function makeAllergenList (data){
 	let rootElement = document.getElementById("root");
+	let ulDIV = document.createElement("div");
 	let ul = document.createElement("ul");
 	ul.id = "allergens";
 		//allergének listába rakása
@@ -38,7 +40,8 @@ function makeAllergenList (data){
 		newLI.innerText = data[i].name;
 		ul.appendChild(newLI);
 	}
-	rootElement.appendChild(ul);
+	rootElement.appendChild(ulDIV);
+	ulDIV.appendChild(ul);
 
 	// Create a "close" button and append it to each list item
 	let myNodelist = document.getElementsByTagName("LI");
@@ -58,7 +61,6 @@ function makeAllergenList (data){
 			div.style.display = "none";
 		}
 	}
-	
 }
 
 function main(){
