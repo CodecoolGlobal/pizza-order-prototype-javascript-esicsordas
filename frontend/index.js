@@ -9,10 +9,15 @@ const potionComponent = ({name, ingredients, period, price, allergens}) => `
 `;
 
 const clickEvent = event => {
-	  if (event.target.tagName === 'LI') {
+	let selectedAllergens = [];
+	if (event.target.tagName === "LI"){
 		event.target.classList.toggle('checked');
-	  }
+		selectedAllergens.push(event.target.innerText)
+		console.log(selectedAllergens);
+	}
+
 }
+
 function getData (link, action){
     let fullUrl = `/api/${link}`;
     fetch(fullUrl)
@@ -31,25 +36,24 @@ function displayData (data){
 
 function makeAllergenList (data){
 	let rootElement = document.getElementById("root");
-	let ulDIV = document.createElement("div");
 	let ul = document.createElement("ul");
 	ul.id = "allergens";
-		//allergének listába rakása
+		//allergdnek listcba raklsa
 	for (let i = 0; i < data.length; i++){
 		let newLI = document.createElement("li");
 		newLI.innerText = data[i].name;
 		ul.appendChild(newLI);
 	}
-	rootElement.appendChild(ulDIV);
-	ulDIV.appendChild(ul);
+	rootElement.appendChild(ul);
 
+	//create style
 	// Create a "close" button and append it to each list item
 	let myNodelist = document.getElementsByTagName("LI");
 	for (let i = 0; i < myNodelist.length; i++) {
 		let span = document.createElement("SPAN");
-		let txt = document.createTextNode("\u00D7");
+	//llet txt = document.createTextNode("\u00D7");
 		span.className = "close";
-		span.appendChild(txt);
+		//span.appendChild(txt);
 		myNodelist[i].appendChild(span);
 	}
 
@@ -61,6 +65,7 @@ function makeAllergenList (data){
 			div.style.display = "none";
 		}
 	}
+	
 }
 
 function main(){

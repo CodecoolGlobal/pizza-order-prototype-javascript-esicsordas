@@ -98,7 +98,7 @@
         },
         {
             "id": "7",
-            "name": "Free lunch slot",
+            "name": "Free lunch spot",
             "ingredients": [
                 "Felix felicis",
                 "Speed",
@@ -109,6 +109,39 @@
             "allergens": [
                 4,
                 5
+            ]
+        },
+        {
+            "id": "8",
+            "name": "Understand other's problem",
+            "ingredients": [
+                "Felix felicis",
+                "Empathy",
+                "Tantrum",
+                "JavaScript's God tears"
+            ],
+            "period": "day",
+            "price": "40 $",
+            "allergens": [
+                3,
+                4
+            ]
+        },
+
+        {
+            "id": "9",
+            "name": "Demo skills",
+            "ingredients": [
+                "Confidence",
+                "Focus",
+                "English dictionary",
+                "Mentor sympathy"
+            ],
+            "period": "day",
+            "price": "15 $",
+            "allergens": [
+                2,
+                3
             ]
         }
     ],
