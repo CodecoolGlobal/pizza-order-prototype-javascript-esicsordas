@@ -1,5 +1,6 @@
 html {
      scroll-behavior: smooth;
+     background-color: rgb(159, 188, 241);
 }
 
 body {
@@ -8,9 +9,21 @@ body {
      font-family: 'Poppins', sans-serif;
      line-height: 1.80857;
      font-weight: normal;
-     background-color: rgb(159, 188, 241);
 }
 
+.potions {
+     text-align: center;
+     border: #555556 solid 1px;
+     border-radius: 2px;
+     padding: 30px;
+     margin: 30px;
+}
+
+#root {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 50px;
+}
 
 h1,
 h2,
@@ -50,9 +63,9 @@ h5 {
 
 h6 {
      font-size: 13px
-}
+} 
 
-*,
+/*,
 *::after,
 *::before {
      -webkit-box-sizing: border-box;
@@ -137,10 +150,6 @@ img {
      box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
 }
 
-.navbar-form input {
-     border: none !important;
-}
-
 .badge {
      font-weight: 500;
 }
@@ -175,7 +184,7 @@ button {
 
 /*---------------------------- preloader area ----------------------------*/
 
-.loader_bg {
+/* .loader_bg {
      position: fixed;
      z-index: 9999999;
      background: #fff;
@@ -197,7 +206,7 @@ button {
 .loader img {
      width: 280px;
 }
-
+ */
 
 /*-- header area --*/
 
@@ -210,7 +219,7 @@ button {
 
 /*-- navigation--*/
 
-.navigation.navbar {
+/* .navigation.navbar {
      float: right;
      background: #fff;
      clear: both;
@@ -270,12 +279,12 @@ button {
 
 .logo {
      padding-top: 14px;
-}
+} */
 
 
 /** banner section **/
 
-.banner_main {
+/* .banner_main {
      background: #f5f6f6;
      padding: 198px 0px 90px 0px;
 }
@@ -343,12 +352,12 @@ button {
      position: absolute;
      right: 20px;
      bottom: 10px;
-}
+} */
 
 
 /** end banner section **/
 
-.titlepage h2 {
+/* .titlepage h2 {
      font-size: 35px;
      color: #2a2a2c;
      line-height: 45px;
@@ -386,7 +395,7 @@ button {
 
 /** about section **/
 
-.about {
+/* .about {
      border-bottom: #000 solid 1px;
      padding: 130px 0 90px 0;
 }
@@ -432,15 +441,15 @@ button {
      color: #1a1a1a;
      font-weight: 500;
      margin-top: 44px;
-}
-
+} */
+ */
 
 /** end about section **/
 
 
 /** Our  Glasses section **/
 
-.glasses {
+/* .glasses {
      background: #fff;
      margin-top: 90px;
 }
@@ -463,11 +472,7 @@ button {
 }
 
 .glasses .glasses_box {
-     text-align: center;
-     border: #555556 solid 1px;
-     border-radius: 2px;
-     padding: 120px 0px 30px 0px;
-     margin-bottom: 30px;
+     
 }
 
 .glasses .glasses_box figure {
@@ -494,7 +499,7 @@ button {
      display: block;
      margin: 0 auto;
      margin-top: 44px;
-}
+} */
 
 
 /** end Our  Glasses section **/
@@ -502,7 +507,7 @@ button {
 
 /** Our shop section **/
 
-.shop {
+/* .shop {
      margin-top: 90px;
      background: #fefdf9;
      border-top: #f2f1ed solid 1px;
@@ -565,7 +570,7 @@ button {
 
 /** clients section **/
 
-.clients {
+/* .clients {
      padding: 90px 0 70px 0;
 }
 
@@ -633,7 +638,7 @@ button {
 #myCarousel .carousel-control-prev,
 #myCarousel .carousel-control-next {
      display: none;
-}
+} */
 
 
 /** end clients section **/
@@ -641,7 +646,7 @@ button {
 
 /** contact section **/
 
-.contact {
+/* .contact {
      margin-top: 90px;
 }
 
@@ -719,7 +724,7 @@ button {
 #request *::placeholder {
      color: #4b4b4c;
      opacity: 1;
-}
+}  */
 
 
 /** end contact section **/
@@ -727,7 +732,7 @@ button {
 
 /** footer **/
 
-.footer {
+/* .footer {
      background: #252525;
      padding-top: 90px;
      text-align: center;
@@ -775,14 +780,14 @@ ul.location_icon li a {
 
 .copyright a:hover {
      color: #03cafc;
-}
+} */
 
 
 /** end footer **/
 
 
 /** inner page css **/
-
+/* 
 .position_head .header {
      position: inherit;
      background: #03cafc;
@@ -791,4 +796,4 @@ ul.location_icon li a {
 .position_head .glasses,
 .shop {
      margin-bottom: 90px;
-}
+}  */
