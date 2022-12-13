@@ -8,13 +8,14 @@ const potionComponent = ({name, ingredients, period, price, allergens}) => `
 	</div>
 `;
 
-const clickEvent = event => {
-	let selectedAllergens = [];
+function filterClickEvent (event){
 	if (event.target.tagName === "LI"){
 		event.target.classList.toggle('checked');
-		selectedAllergens.push(event.target.innerText)
-		console.log(selectedAllergens);
-	}
+		return event.target.innerText;
+	} 
+}
+
+function selectedAllergens (allergen){
 
 }
 
@@ -71,7 +72,20 @@ function makeAllergenList (data){
 function main(){
 	getData("potions", displayData);
 	getData("allergens", makeAllergenList);
-	window.addEventListener("click", clickEvent)
+	let selectedAllergens = [];
+	window.addEventListener("click", event  => {
+		let selectedAllergen;
+		console.log(controlString(filterClickEvent(event)));
+		if (controlString(filterClickEvent(event))){
+			selectedAllergen = filterClickEvent(event);
+		}
+		selectedAllergens.push(selectedAllergen);
+		console.log(selectedAllergens);
+	})
+}
+
+function controlString(str) {
+	return str.toUpperCase() !== str.toLowerCase();
 }
 
 main ();
