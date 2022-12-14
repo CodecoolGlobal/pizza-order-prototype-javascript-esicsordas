@@ -1,4 +1,4 @@
-function potionComponent({id, name, ingredients, period, price, allergens}) { 
+function potionComponent({id, name, ingredients, period, price}) { 
 	return `
 	<div id ="${id}" class="potions">
 		<h2>${name}</h2>
@@ -117,7 +117,18 @@ function makeAllergenList (data){
 	}
 }
 
+function createHead(){
+	let rootElement = document.getElementById("root");
+	let headdiv = document.createElement('div');
+	let headPic = document.createElement('img');
+	headPic.classList.add('headpicture');
+	headPic.src = `images/BET potions.png`;
+	headdiv.appendChild(headPic);
+	document.body.appendChild(headdiv);
+}
+
 function main(){
+	createHead();
 	getData("potions", displayData);
 	getData("allergens", makeAllergenList);
 }
