@@ -1,32 +1,25 @@
 function potionComponent({id, name, ingredients, period, price, allergens}) { 
-	console.log(id)
 	return `
 	<div id ="${id}" class="potions">
 		<h2>${name}</h2>
 		<h3>${ingredients}</h3>
 		<h4>${period}</h4>
 		<h5>${price}</h5>
-		<h6>${allergens}</h6>
 	</div>
 	`
 };
 
 function setBackground(id) {
-	console.log(id)
-	let div = document.getElementById(`${id}`)
-	let pic = document.createElement('img')
-	pic.src = `images/pic${id}.jpg`
-	div.appendChild(pic)
-	console.log(pic)
+	let div = document.getElementById(`${id}`);
+	let pic = document.createElement('img');
+	pic.classList.add('picture');
+	pic.src = `images/pic${id}.jpg`;
+	div.appendChild(pic);
 }
-
-
 
 function filterClickEvent (event, selectedAllergens){
 	event.target.classList.toggle('checked');
-
 	selectedAllergen = event.target.innerText
-
 	if (!selectedAllergens.has(selectedAllergen)){
 		selectedAllergens.add(selectedAllergen);
 	}
@@ -39,8 +32,7 @@ function filterClickEvent (event, selectedAllergens){
 function filtering (set, data){
 	let arrayIds = [];
 	let array = [...set];
-	let allergens = data;
-	//console.log("array", array);
+	console.log("array", array);
 	for (let i = 0; i <data.length; i++){
 		//console.log(data[i].name);
 		array.filter(element => {
@@ -49,9 +41,23 @@ function filtering (set, data){
 			}
 		})
 	}
-	console.log("arrayIds", arrayIds);
-	
+	fetch("api/potions")
+		.then((response) => response.json())
+		.then((data) => {
+			for (let i = 0; i < data.length; i++) {
+				let chosenPotion = document.getElementById(`${data[i].id}`);
+				chosenPotion.classList.remove('chosen')
+				data[i].allergens.filter(item => arrayIds.includes(item)? addClasslistToElements(data[i].id): null)
+			}
+		})
 }
+
+function addClasslistToElements(id){
+	let chosenPotion = document.getElementById(`${id}`);
+	chosenPotion.classList.add('chosen')
+
+}
+
 
 function getData (link, action){
     let fullUrl = `/api/${link}`;
@@ -74,13 +80,9 @@ function makeAllergenList (data){
 	let rootElement = document.getElementById("root");
 	let ulDiv = document.createElement("div");
 	ulDiv.id = "ulDiv";
-
 	let ul = document.createElement("ul");
 	ul.id = "allergenek";
-
-
 	let selectedAllergens = new Set();
-
 		//allergdnek listcba raklsa
 	for (let i = 0; i < data.length; i++){
 		let newLI = document.createElement("li");
@@ -113,10 +115,6 @@ function makeAllergenList (data){
 			div.style.display = "none";
 		}
 	}
-}
-
-function isString(str) {
-	return str.toUpperCase() !== str.toLowerCase();
 }
 
 function main(){
