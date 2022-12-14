@@ -76,10 +76,16 @@ function main(){
 	window.addEventListener("click", event  => {
 		//allergének kezelése
 		let selectedAllergen;
+			//allergén ellenőrzése, hogy string-e
 		if (isString(filterClickEvent(event))){
 			selectedAllergen = filterClickEvent(event);
 		}
-		selectedAllergens.add(selectedAllergen);
+			//allergén ellenőrzése, hogy benne van-e már a set-ben
+		if (selectedAllergens.has(selectedAllergen)){
+			selectedAllergens.delete(selectedAllergen);
+		} else if (!selectedAllergens.has(selectedAllergen)){
+			selectedAllergens.add(selectedAllergen);
+		}
 		console.log(selectedAllergens);
 	})
 }
