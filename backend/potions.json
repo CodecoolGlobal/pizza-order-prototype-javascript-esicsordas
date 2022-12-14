@@ -14,8 +14,7 @@
             "allergens": [
                 1,
                 3
-            ],
-            "img": "images/cant_be_late.jpg"
+            ]
         },
         {
             "id": "2",
@@ -31,8 +30,7 @@
             "allergens": [
                 1,
                 3
-            ],
-            "img": "images/unlimited_workshop_attention.jpg"
+            ]
         },
         {
             "id": "3",
@@ -48,8 +46,7 @@
             "allergens": [
                 2,
                 5
-            ],
-            "img": "images/relax_for_pa.jpg"
+            ]
         },
         {
             "id": "4",
@@ -66,8 +63,7 @@
                 3,
                 4,
                 5
-            ],
-            "img": "images/built_in_debugger.jpg"
+            ]
         },
         {
             "id": "5",
@@ -83,8 +79,7 @@
             "allergens": [
                 2,
                 3
-            ],
-            "img": "images/mentor_gin.jpg"
+            ]
         },
         {
             "id": "6",
@@ -99,8 +94,7 @@
             "allergens": [
                 1,
                 3
-            ],
-            "img": "images/no_typos.jpg"
+            ]
         },
         {
             "id": "7",
@@ -115,8 +109,7 @@
             "allergens": [
                 4,
                 5
-            ],
-            "img": "images/free_lunch_spot.jpg"
+            ]
         },
         {
             "id": "8",
@@ -132,8 +125,7 @@
             "allergens": [
                 3,
                 4
-            ],
-            "img": "images/understand_others_problem.jpg"
+            ]
         },
 
         {
@@ -150,8 +142,7 @@
             "allergens": [
                 2,
                 3
-            ],
-            "img": "images/demo_skill.jpg"
+            ]
         }
     ],
     "allergens": [

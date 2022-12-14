@@ -19,7 +19,9 @@ body {
      margin: 30px;
 }
 
-
+img {
+     width: 300 px
+}
 
 #root {
      display: grid;

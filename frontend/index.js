@@ -1,13 +1,26 @@
-const potionComponent = ({name, ingredients, period, price, allergens, img}) => `
-	<div class="potions">
-		<img scr=${img}>
+function potionComponent({id, name, ingredients, period, price, allergens}) { 
+	console.log(id)
+	return `
+	<div id ="${id}" class="potions">
 		<h2>${name}</h2>
 		<h3>${ingredients}</h3>
 		<h4>${period}</h4>
 		<h5>${price}</h5>
 		<h6>${allergens}</h6>
 	</div>
-`;
+	`
+};
+
+function setBackground(id) {
+	console.log(id)
+	let div = document.getElementById(`${id}`)
+	let pic = document.createElement('img')
+	pic.src = `images/pic${id}.jpg`
+	div.appendChild(pic)
+	console.log(pic)
+}
+
+
 
 function filterClickEvent (event, selectedAllergens){
 	event.target.classList.toggle('checked');
@@ -50,6 +63,7 @@ function displayData (data){
 	let rootElement = document.getElementById("root");
 	data.map(potion => {
 		rootElement.insertAdjacentHTML("beforeend", potionComponent(potion))
+		setBackground(potion.id)
 	})
 }
 
