@@ -8,11 +8,19 @@ const potionComponent = ({name, ingredients, period, price, allergens}) => `
 	</div>
 `;
 
-function filterClickEvent (event){
-	if (event.target.tagName === "LI"){
-		event.target.classList.toggle('checked');
-		return event.target.innerText;
-	} 
+function filterClickEvent (event, selectedAllergens){
+	console.log(event.target.innerText);
+	event.target.classList.toggle('checked');
+
+	selectedAllergen = event.target.innerText
+
+	if (!selectedAllergens.has(selectedAllergen)){
+		selectedAllergens.add(selectedAllergen);
+	}
+	else if (selectedAllergens.has(selectedAllergen)){
+			selectedAllergens.delete(selectedAllergen);
+	}
+	return selectedAllergens;
 }
 
 function getData (link, action){
@@ -33,15 +41,28 @@ function displayData (data){
 
 function makeAllergenList (data){
 	let rootElement = document.getElementById("root");
+	let ulDiv = document.createElement("div");
+	ulDiv.id = "ulDiv";
+
 	let ul = document.createElement("ul");
-	ul.id = "allergens";
+	ul.id = "allergenek";
+
+
+	let selectedAllergens = new Set();
+
 		//allergdnek listcba raklsa
 	for (let i = 0; i < data.length; i++){
 		let newLI = document.createElement("li");
 		newLI.innerText = data[i].name;
+		newLI.addEventListener("click", (event) => {
+			filterClickEvent(event, selectedAllergens);
+			console.log(selectedAllergens);
+		})
 		ul.appendChild(newLI);
 	}
-	rootElement.appendChild(ul);
+
+	ulDiv.appendChild(ul);
+	rootElement.appendChild(ulDiv);
 
 	//create style
 	// Create a "close" button and append it to each list item
@@ -62,7 +83,6 @@ function makeAllergenList (data){
 			div.style.display = "none";
 		}
 	}
-	
 }
 
 function isString(str) {
@@ -72,22 +92,6 @@ function isString(str) {
 function main(){
 	getData("potions", displayData);
 	getData("allergens", makeAllergenList);
-	let selectedAllergens = new Set();
-	window.addEventListener("click", event  => {
-		//allergének kezelése
-		let selectedAllergen;
-			//allergén ellenőrzése, hogy string-e
-		if (isString(filterClickEvent(event))){
-			selectedAllergen = filterClickEvent(event);
-		}
-			//allergén ellenőrzése, hogy benne van-e már a set-ben
-		if (selectedAllergens.has(selectedAllergen)){
-			selectedAllergens.delete(selectedAllergen);
-		} else if (!selectedAllergens.has(selectedAllergen)){
-			selectedAllergens.add(selectedAllergen);
-		}
-		console.log(selectedAllergens);
-	})
 }
 
 main ();
