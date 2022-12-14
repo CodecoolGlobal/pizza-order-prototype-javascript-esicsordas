@@ -23,18 +23,21 @@ function filterClickEvent (event, selectedAllergens){
 	return selectedAllergens;
 }
 
-function filtering (set){
+function filtering (set, data){
+	let arrayIds = [];
 	let array = [...set];
-	let allergens = getData("allergens", sendBackData);
-	console.log("filter", allergens);
-/* 	array.filter(element => {
-		if ()
-	}); */
-}
-
-function sendBackData (data){
-	console.log(data);
-	return data;
+	let allergens = data;
+	//console.log("array", array);
+	for (let i = 0; i <data.length; i++){
+		//console.log(data[i].name);
+		array.filter(element => {
+			if (element === data[i].name){
+				arrayIds.push((data[i].id));
+			}
+		})
+	}
+	console.log("arrayIds", arrayIds);
+	
 }
 
 function getData (link, action){
@@ -70,7 +73,7 @@ function makeAllergenList (data){
 		newLI.innerText = data[i].name;
 		newLI.addEventListener("click", (event) => {
 			let set = filterClickEvent(event, selectedAllergens);
-			filtering (set);
+			filtering (set, data);
 		})
 		ul.appendChild(newLI);
 	}
