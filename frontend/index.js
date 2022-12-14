@@ -1,5 +1,6 @@
-const potionComponent = ({name, ingredients, period, price, allergens}) => `
+const potionComponent = ({name, ingredients, period, price, allergens, img}) => `
 	<div class="potions">
+		<img scr=${img}>
 		<h2>${name}</h2>
 		<h3>${ingredients}</h3>
 		<h4>${period}</h4>
@@ -9,7 +10,6 @@ const potionComponent = ({name, ingredients, period, price, allergens}) => `
 `;
 
 function filterClickEvent (event, selectedAllergens){
-	console.log(event.target.innerText);
 	event.target.classList.toggle('checked');
 
 	selectedAllergen = event.target.innerText
@@ -21,6 +21,20 @@ function filterClickEvent (event, selectedAllergens){
 			selectedAllergens.delete(selectedAllergen);
 	}
 	return selectedAllergens;
+}
+
+function filtering (set){
+	let array = [...set];
+	let allergens = getData("allergens", sendBackData);
+	console.log("filter", allergens);
+/* 	array.filter(element => {
+		if ()
+	}); */
+}
+
+function sendBackData (data){
+	console.log(data);
+	return data;
 }
 
 function getData (link, action){
@@ -55,12 +69,11 @@ function makeAllergenList (data){
 		let newLI = document.createElement("li");
 		newLI.innerText = data[i].name;
 		newLI.addEventListener("click", (event) => {
-			filterClickEvent(event, selectedAllergens);
-			console.log(selectedAllergens);
+			let set = filterClickEvent(event, selectedAllergens);
+			filtering (set);
 		})
 		ul.appendChild(newLI);
 	}
-
 	ulDiv.appendChild(ul);
 	rootElement.appendChild(ulDiv);
 
