@@ -147,6 +147,7 @@ function addToOrder() {
 			const kattId = event.target.id.slice(-1);
 			const amountInput = document.getElementById(`amount${kattId}`);
 			orders.potions.push({ 'id': kattId, 'amount': amountInput.value });
+			amountInput.value = 0;
 			//console.log(event.target.innerText);
 		}
 		if (event.target.innerText === "Submit") {
