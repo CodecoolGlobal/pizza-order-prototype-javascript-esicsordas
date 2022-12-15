@@ -1,43 +1,53 @@
 
-@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+* {
+     margin: 0;
+     padding:  0;
+}
 
 html {
      scroll-behavior: smooth;
-     background-color: rgb(159, 188, 241);
+     background-color: rgb(8, 38, 94);
+     padding: 0%;
 }
 
 body {
      color: #666666;
      font-size: 14px;
-     font-family: 'La Belle Aurore', cursive;
+     font-family: 'Lobster', cursive;
      line-height: 1.80857;
      font-weight: normal;
 }
 
 .potions {
-     text-align: left;
-     border: #555556 solid 1px;
-     border-radius: 2px;
-     padding: 30px;
+     text-align: center;
+     border: #ebebf4 solid 1px;
+     border-radius: 6px;
+     padding: 25px;
      margin: 30px;
+     background-color: rgb(32, 147, 230);
+}
+
+.form {
+     width: 300px;
 }
 
 button {
      text-align: center;
 }
 
-input {
+.amount {
      width: 80px;
-     padding-inline-start: 30px;
      
 }
 .picture {
-     width : 280px; 
+     width : 300px; 
      background-position: -300px -30px;
      height: 300px;
      padding-left: 30px;
-     padding-left: 30px;
+     padding-right: 30px;
+     border-radius: 50%;
 }
 
 #root {
@@ -72,15 +82,15 @@ h2 {
 }
 
 h3 {
-     font-size: 18px;
+     font-size: 25px;
 }
 
 h4 {
-     font-size: 16px
+     font-size: 20px
 }
 
 h5 {
-     font-size: 14px
+     font-size: 16px
 }
 
 h6 {
@@ -94,7 +104,7 @@ ul {
    }
    
 .chosen {
-     opacity: 0.5;
+     opacity: 0.2;
 }
 /* Style the list items */
 ul li {
@@ -123,6 +133,12 @@ ul li {
      /* text-decoration: line-through; */
    }
    
+.headerelement {
+     background-color: white;
+     display: grid;
+     grid-template-columns: 1fr 400px 100px;
+     margin: auto;
+   } 
    
    /* Add a "checked" mark when clicked on */
    /* ul li.checked::before {
