@@ -35,7 +35,6 @@ function filtering(set, data) {
 	let arrayIds = [];
 	let array = [...set];
 	for (let i = 0; i < data.length; i++) {
-		//console.log(data[i].name);
 		array.filter(element => {
 			if (element === data[i].name) {
 				arrayIds.push((data[i].id));
@@ -59,7 +58,6 @@ function addClasslistToElements(id) {
 
 }
 
-
 function getData(link, action) {
 	let fullUrl = `/api/${link}`;
 	fetch(fullUrl)
@@ -78,7 +76,7 @@ function displayData(data) {
 }
 
 function makeAllergenList(data) {
-	let rootElement = document.getElementById("root");
+	let headDiv = document.getElementById("headdiv");
 	let ulDiv = document.createElement("div");
 	ulDiv.id = "ulDiv";
 	let ul = document.createElement("ul");
@@ -95,7 +93,8 @@ function makeAllergenList(data) {
 		ul.appendChild(newLI);
 	}
 	ulDiv.appendChild(ul);
-	rootElement.appendChild(ulDiv);
+	let form = document.getElementById("form");
+	headDiv.insertBefore(ulDiv, form);
 
 	//create style
 	// Create a "close" button and append it to each list item
@@ -148,40 +147,69 @@ function addToOrder() {
 			const kattId = event.target.id.slice(-1);
 			const amountInput = document.getElementById(`amount${kattId}`);
 			orders.potions.push({ 'id': kattId, 'amount': amountInput.value });
+			console.log(event.target.innerText);
 		}
 		if (event.target.innerText === "Submit") {
+			const fname = document.getElementById("fname").value;
+			const femail = document.getElementById("femail").value;
+			const fcity = document.getElementById("fcity").value;
+			const faddress = document.getElementById("faddress").value;
+			const today = new Date();
+
 			orders.id = customerCounter;
-			const today = new Date()
-			orders.date = {}
+			orders.date = {};
 			orders.date.year = `${today.getFullYear()}`;
 			orders.date.month = `${today.getMonth() + 1}`;
 			orders.date.day = `${today.getDate()}`;
 			orders.date.hour = `${today.getHours()}`;
-			orders.date.minute = `${today.getMinutes()}`
+			orders.date.minute = `${today.getMinutes()}`;
+			orders.customer ={};
+			orders.customer.name = fname;
+			orders.customer.email = femail;
+			orders.customer.address = {};
+			orders.customer.address.city = fcity;
+			orders.customer.address.street = faddress;
 			customerCounter += 1;
-			console.log(orders);
+			sendToBackend(orders);
 		}
 	})
+}
+
+function sendToBackend (object) {
+	let data = new FormData();
+	data.append( "json", JSON.stringify( object ) );
+		fetch("/api/order",{
+		method: "POST",
+		body: data
+	})
+    .then(function (data) {
+    console.log('Request succeeded with JSON response', data);
+    })
+    .catch(function (error) {
+    console.log('Request failed', error);
+    });
 }
 
 function createOrderform() {
 	let headDiv = document.getElementById("headdiv");
 	const submitButton = document.createElement('button');
 	submitButton.innerText = "Submit"
-	headDiv.insertAdjacentHTML("beforeend", formComponent())
-	headDiv.appendChild(submitButton)
+	submitButton.classList.add('submit')
+	headDiv.insertAdjacentHTML("beforeend", formComponent());
+	let form = document.getElementById("form");
+	form.appendChild(submitButton)
 }
 
 function formComponent () {
-	return `<form>
-	<label for="fname">Name:</label><br>
+	return `<form id="form" action="javascript:void(0);">
+	<label class='label' for="fname">Name:</label><br>
 	<input type="text" id="fname" class="form"><br>
-	<label for="lname">Email:</label><br>
-	<input type="text" id="email" class="form"><br>
-	<label for="lname">City:</label><br>
-	<input type="text" id="city" class="form"><br>
-	<label for="lname">Address:</label><br>
-	<input type="text" id="address" class="form">
+	<label class='label'for="lname">Email:</label><br>
+	<input type="text" id="femail" class="form"><br>
+	<label class='label' for="lname">City:</label><br>
+	<input type="text" id="fcity" class="form"><br>
+	<label class='label' for="lname">Address:</label><br>
+	<input type="text" id="faddress" class="form"><br><br>
   </form>`
 }
 
