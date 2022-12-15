@@ -1,32 +1,4 @@
 {
 	"orders": [
-		{
-			"potions": [
-				{
-					"id": "1",
-					"amount": "2"
-				},
-				{
-					"id": "2",
-					"amount": "2"
-				}
-			],
-			"id": 1,
-			"date": {
-				"year": "2022",
-				"month": "12",
-				"day": "15",
-				"hour": "16",
-				"minute": "46"
-			},
-			"customer": {
-				"name": "Toma Tamás",
-				"email": "tomatams@gmail.com",
-				"address": {
-					"city": "Isaszeg",
-					"street": "Rákóczi utca 64."
-				}
-			}
-		}
 	]
 }
