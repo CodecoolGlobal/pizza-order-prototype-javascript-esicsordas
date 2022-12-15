@@ -4,12 +4,14 @@ function potionComponent({id, name, ingredients, period, price}) {
 		<h2>${name}</h2>
 		<h3>${ingredients}</h3>
 		<h4>${period}</h4>
-		<h5>${price}</h5>
+		<h5>${price}</h5><br><br>
+		<input type="number" min="0" id ="amount${id}" value= "0" >
+		<button id ="button${id}">Add to order</button>
 	</div>
 	`
 };
 
-function setBackground(id) {
+function addPicture(id) {
 	let div = document.getElementById(`${id}`);
 	let pic = document.createElement('img');
 	pic.classList.add('picture');
@@ -32,7 +34,6 @@ function filterClickEvent (event, selectedAllergens){
 function filtering (set, data){
 	let arrayIds = [];
 	let array = [...set];
-	console.log("array", array);
 	for (let i = 0; i <data.length; i++){
 		//console.log(data[i].name);
 		array.filter(element => {
@@ -72,7 +73,7 @@ function displayData (data){
 	let rootElement = document.getElementById("root");
 	data.map(potion => {
 		rootElement.insertAdjacentHTML("beforeend", potionComponent(potion))
-		setBackground(potion.id)
+		addPicture(potion.id);
 	})
 }
 
@@ -131,6 +132,39 @@ function main(){
 	createHead();
 	getData("potions", displayData);
 	getData("allergens", makeAllergenList);
+	addToOrder();
+
 }
 
+
+
+function addToOrder() {
+	let orders = {};
+	orders.potions = [];
+	let customerCounter = 1;
+
+	
+
+	window.addEventListener("click", (event) =>{
+		if (event.target.innerText === "Add to order"){
+		const kattId = event.target.id.slice(-1);
+		const amountInput = document.getElementById(`amount${kattId}`);
+		orders.potions.push({'id': kattId, 'amount': amountInput.value});
+		console.log(orders);
+		}
+		if (event.target.innerText === "Submit"){
+			const today = new Date()
+			orders.date ={}
+			orders.date.year = `${today.getFullYear()}`;
+			orders.date.month = `${today.getMonth()+1}`;
+			orders.date.day = `${today.getDate()}`;
+			orders.date.hour = `${today.getHours()}`;
+			orders.date.minute = `${today.getMinutes()}`
+		}
+	})
+}
+	// orders.id = customerCounter;
+	// customerCounter+=1;
+	// const button = document.getElementById(`button${id}`)
+        
 main ();

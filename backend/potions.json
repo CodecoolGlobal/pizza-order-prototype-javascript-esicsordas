@@ -5,11 +5,11 @@
             "name": "Can't be late",
             "ingredients": [
                 "Coffee",
-                "Tantrum",
-                "Curiosity",
-                "Mentor sympathy"
+                " Tantrum",
+                " Curiosity",
+                " Mentor sympathy"
             ],
-            "period": "week",
+            "period": "Period: 1 week",
             "price": "20 $",
             "allergens": [
                 1,
@@ -21,11 +21,11 @@
             "name": "Unlimited Workshop attention",
             "ingredients": [
                 "Coffee",
-                "Tantrum",
-                "Curiosity",
-                "Adderal medicine"
+                " Tantrum",
+                " Curiosity",
+                " Adderal medicine"
             ],
-            "period": "day",
+            "period": "Period: 1 day",
             "price": "5 $",
             "allergens": [
                 1,
@@ -37,11 +37,11 @@
             "name": "Relax for PA",
             "ingredients": [
                 "Confidence",
-                "Focus",
-                "Valeriana",
-                "Mentor sympathy"
+                " Focus",
+                " Valeriana",
+                " Mentor sympathy"
             ],
-            "period": "day",
+            "period": "Period: 1 day",
             "price": "40 $",
             "allergens": [
                 2,
@@ -53,11 +53,11 @@
             "name": "Built-in debugger",
             "ingredients": [
                 "Felix felicis",
-                "Focus",
-                "Ginseng",
-                "JavaScript's God tears"
+                " Focus",
+                " Ginseng",
+                " JavaScript's God tears"
             ],
-            "period": "day",
+            "period": "Period: 1 day",
             "price": "25 $",
             "allergens": [
                 3,
@@ -70,11 +70,11 @@
             "name": "Mentor Gin",
             "ingredients": [
                 "Mentor sympathy",
-                "Focus",
-                "Mentor soul",
-                "Hendrick's Gin"
+                " Focus",
+                " Mentor soul",
+                " Hendrick's Gin"
             ],
-            "period": "hour",
+            "period": "Period: 1 hour",
             "price": "25 $",
             "allergens": [
                 2,
@@ -86,10 +86,10 @@
             "name": "No typos",
             "ingredients": [
                 "Coffee",
-                "Focus",
-                "JavaScript's God tears"
+                " Focus",
+                " JavaScript's God tears"
             ],
-            "period": "day",
+            "period": "Period: 1 day",
             "price": "5 $",
             "allergens": [
                 1,
@@ -101,10 +101,10 @@
             "name": "Free lunch spot",
             "ingredients": [
                 "Felix felicis",
-                "Speed",
-                "Ginseng"
+                " Speed",
+                " Ginseng"
             ],
-            "period": "month",
+            "period": "Period: 1 month",
             "price": "15 $",
             "allergens": [
                 4,
@@ -116,11 +116,11 @@
             "name": "Understand other's problem",
             "ingredients": [
                 "Felix felicis",
-                "Empathy",
-                "Tantrum",
-                "JavaScript's God tears"
+                " Empathy",
+                " Tantrum",
+                " JavaScript's God tears"
             ],
-            "period": "day",
+            "period": "Period: 1 day",
             "price": "40 $",
             "allergens": [
                 3,
@@ -132,11 +132,11 @@
             "name": "Demo skills",
             "ingredients": [
                 "Confidence",
-                "Focus",
-                "English dictionary",
-                "Mentor sympathy"
+                " Focus",
+                " English dictionary",
+                " Mentor sympathy"
             ],
-            "period": "day",
+            "period": "Period: 1 day",
             "price": "15 $",
             "allergens": [
                 2,

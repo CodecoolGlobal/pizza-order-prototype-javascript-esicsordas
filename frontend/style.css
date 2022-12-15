@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+
+
 html {
      scroll-behavior: smooth;
      background-color: rgb(159, 188, 241);
@@ -6,7 +10,7 @@ html {
 body {
      color: #666666;
      font-size: 14px;
-     font-family: 'Poppins', sans-serif;
+     font-family: 'La Belle Aurore', cursive;
      line-height: 1.80857;
      font-weight: normal;
 }
@@ -19,11 +23,21 @@ body {
      margin: 30px;
 }
 
-.picture {
-     width : 220px; 
-     background-position: -300px -30px;
-     height: 240px;
+button {
+     text-align: center;
+}
+
+input {
+     width: 80px;
+     padding-inline-start: 30px;
      
+}
+.picture {
+     width : 280px; 
+     background-position: -300px -30px;
+     height: 300px;
+     padding-left: 30px;
+     padding-left: 30px;
 }
 
 #root {
@@ -49,11 +63,11 @@ h6 {
 }
 
 h1 {
-     font-size: 24px;
+     font-size: 30px;
 }
 
 h2 {
-     font-size: 20px;
+     font-size: 30px;
      font-weight: bold
 }
 
@@ -125,7 +139,7 @@ ul li {
    } */
    
    /* Style the close button */
-   .close {
+   /* .close {
      position: absolute;
      right: 0;
      top: 0;
@@ -138,7 +152,7 @@ ul li {
    }
    
    /* Style the input */
-   input {
+   /* input {
      margin: 0;
      border: none;
      border-radius: 0;
@@ -147,7 +161,7 @@ ul li {
      float: left;
      font-size: 16px;
    }
-   
+    */ 
 /*,
 *::after,
 *::before {
