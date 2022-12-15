@@ -1,6 +1,7 @@
 const express = require("express");
 const fs = require("fs/promises");
 const path = require("path");
+const { readFile } = require("fs/promises");
 const app = express();
 
 const readPackages = require("./model.js"); 
@@ -28,14 +29,12 @@ app.get("/api/order",  async (req, res) => {
 })
 
 app.post("/api/order",  async (req, res) => {
-    let rawData = await readPackages(orderPath, "orders");
+    const data = await readFile(orderPath);
+    const dataObj = JSON.parse(data);
     let rbody = req.body;
-
-    rawData = rbody;
-
-    overWritePkgsJson(JSON.stringify(rawData))
-    //res.send("Done");
-    //res.send(JSON.stringify(orders, null, '\t'));
+    console.log(rbody);
+    dataObj.orders.push(rbody);    
+    overWritePkgsJson(JSON.stringify(dataObj, null, '\t'))
     res.end();
 })
 
@@ -44,7 +43,7 @@ app.listen(3000);
 
 async function overWritePkgsJson(data) {
     try {
-      await fs.writeFile('./backend/orders.json', data);
+      await fs.writeFile('./backend//orders.json', data);
     } catch (err) {
       console.log(err);
     }

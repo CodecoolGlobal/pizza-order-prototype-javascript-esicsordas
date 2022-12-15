@@ -147,7 +147,7 @@ function addToOrder() {
 			const kattId = event.target.id.slice(-1);
 			const amountInput = document.getElementById(`amount${kattId}`);
 			orders.potions.push({ 'id': kattId, 'amount': amountInput.value });
-			console.log(event.target.innerText);
+			//console.log(event.target.innerText);
 		}
 		if (event.target.innerText === "Submit") {
 			const fname = document.getElementById("fname").value;
@@ -176,17 +176,20 @@ function addToOrder() {
 }
 
 function sendToBackend (object) {
-	let data = new FormData();
-	data.append( "json", JSON.stringify( object ) );
+	//let data = new FormData();
+	let dataToSend = JSON.stringify(object);
 		fetch("/api/order",{
-		method: "POST",
-		body: data
+			credentials: "same-origin",
+			mode: "same-origin",
+			method: "post",
+			headers: { "Content-Type": "application/json" },
+			body: dataToSend
+	})
+	.catch(function (error) {
+	console.log('Request failed', error);
 	})
     .then(function (data) {
     console.log('Request succeeded with JSON response', data);
-    })
-    .catch(function (error) {
-    console.log('Request failed', error);
     });
 }
 
