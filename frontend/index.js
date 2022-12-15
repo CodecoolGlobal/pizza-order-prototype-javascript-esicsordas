@@ -151,10 +151,10 @@ function addToOrder() {
 			//console.log(event.target.innerText);
 		}
 		if (event.target.innerText === "Submit") {
-			const fname = document.getElementById("fname").value;
-			const femail = document.getElementById("femail").value;
-			const fcity = document.getElementById("fcity").value;
-			const faddress = document.getElementById("faddress").value;
+			const fname = document.getElementById("fname");
+			const femail = document.getElementById("femail");
+			const fcity = document.getElementById("fcity");
+			const faddress = document.getElementById("faddress");
 			const today = new Date();
 
 			orders.id = customerCounter;
@@ -165,13 +165,17 @@ function addToOrder() {
 			orders.date.hour = `${today.getHours()}`;
 			orders.date.minute = `${today.getMinutes()}`;
 			orders.customer ={};
-			orders.customer.name = fname;
-			orders.customer.email = femail;
+			orders.customer.name = fname.value;
+			orders.customer.email = femail.value;
 			orders.customer.address = {};
-			orders.customer.address.city = fcity;
-			orders.customer.address.street = faddress;
-			customerCounter += 1;
+			orders.customer.address.city = fcity.value;
+			orders.customer.address.street = faddress.value;
 			sendToBackend(orders);
+			customerCounter += 1;
+			fname.value = '';
+			femail.value='';
+			fcity.value='';
+			faddress.value='';
 		}
 	})
 }
