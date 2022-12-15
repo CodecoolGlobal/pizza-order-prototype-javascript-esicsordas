@@ -118,7 +118,6 @@ function makeAllergenList(data) {
 }
 
 function createHead() {
-	let rootElement = document.getElementById("root");
 	let headDiv = document.createElement('div');
 	headDiv.id = "headdiv";
 	headDiv.classList.add("headerelement")
@@ -135,6 +134,17 @@ function main() {
 	getData("allergens", makeAllergenList);
 	createOrderform()
 	addToOrder();
+	systemBossButton();
+}
+
+function systemBossButton(){
+	let bossButton = document.createElement('button');
+	bossButton.innerText = "BossButton";
+	document.body.appendChild(bossButton);
+	bossButton.onclick = function () {
+        location.href = "http://localhost:3000/api/order";
+    };
+
 }
 
 function addToOrder() {
