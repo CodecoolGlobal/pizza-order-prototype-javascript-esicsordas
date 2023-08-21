@@ -7,16 +7,16 @@ This project features a webshop-like webpage created using vanilla JavaScript an
 ### Prerequisites
 To run this project, you need to have the following:
 
-Node Package Manager (npm) – if you don’t have it, run the following command in your terminal: npm i
+Node Package Manager (npm) – if you don’t have it, run the following command in your terminal: _npm i_
 optional – Visual Studio Code  - you can open the project in this, but not mandatory to have it
 
 ### Usage
 Follow the steps below to use this project:
 
 Clone the repository to your local machine.
-In your terminal, move into the project’s folder  OR open the project in VsCode
-Run the following command in the terminal : npm run devStart
-This will start the project, and you can reach in your browser, ont he following URL:  * http://localhost:3000/*
+In your terminal, move into the project’s folder  _OR_ open the project in VsCode
+Run the following command in the terminal : _npm run devStart_
+This will start the project, and you can reach in your browser, ont he following URL:  _http://localhost:3000/_
 Here you can try the features of the project.
 
 ### Contributing
