@@ -22,5 +22,5 @@ Here you can try the features of the project.
 ### Contributing
 This project was made by three Codecool students: Tóth-Mátrai Boróka, Csordás Emese and Toma Tamás.
 
-###Contact
-If you have any questions or want to discuss this project, you can reach us at tmboroka@gmail.com, cs.esi963@gmail.com or tomatams@gmail.com .
+### Contact
+If you have any questions or want to discuss this project, you can reach us at tmboroka@gmail.com, cs.esi963@gmail.com or tomatams@gmail.com.
