@@ -54,6 +54,11 @@
 ## About The Project :page_with_curl:	
 <br />
 In this project, we have crafted a webshop tailored for Codecoolers. This online platform offers an array of potions, each imbued with distinct advantages catered to the buyer's desires. Every potion boasts an associated price, affording the buyer the choice to determine the quantity they wish to add to their cart. Upon finalizing their selections, the order can be submitted to the website, subsequently being stored in JSON format on the server-side. Notably, the website also features a filtering functionality, allowing users to specify particular ingredients they wish to exclude from their options.
+
+<br />
+<br />
+We created the project a long time ago, and since then we have learned a lot of new technologies and systematization methodologies during our learning process. We are refactoring the code.
+
 <br />
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
