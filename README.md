@@ -4,23 +4,20 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![Emese's LinkedIn][linkedin-shield]][LinkedIn - Emese]
-[![Tamás's LinkedIn][linkedin-shield]][LinkedIn - Tamás]
-[![László's LinkedIn][linkedin-shield]][LinkedIn - Boróka]
 
 <br>
 <br>
 
-<h3 align="center">BET potions</h3>
+<h3 align="center"> :test_tube: BET potions :test_tube:</h3>
 <br>
   <p align="center">
     A webshop, where codecoolers can buy potions that help them on their codecool journey
     <br>
     <br>
-    <a href="https://github.com/CodecoolGlobal/pizza-order-prototype-javascript-esicsordas"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/CodecoolGlobal/pizza-order-prototype-javascript-esicsordas"><strong>Explore the docs :arrow_right:	</strong></a>
     <br />
     <br />
-    <a href="https://prezi.com/p/2p73cvvyevkb/?present=1">View Presentation of the project</a>
+    <a href="https://prezi.com/p/2p73cvvyevkb/?present=1">View Presentation of the project :clapper:	</a>
   </p>
 </div>
 
@@ -54,7 +51,7 @@
 <!-- ABOUT THE PROJECT -->
 <div id="about-the-project"></div>
 
-## About The Project
+## About The Project :page_with_curl:	
 <br />
 In this project, we have crafted a webshop tailored for Codecoolers. This online platform offers an array of potions, each imbued with distinct advantages catered to the buyer's desires. Every potion boasts an associated price, affording the buyer the choice to determine the quantity they wish to add to their cart. Upon finalizing their selections, the order can be submitted to the website, subsequently being stored in JSON format on the server-side. Notably, the website also features a filtering functionality, allowing users to specify particular ingredients they wish to exclude from their options.
 <br />
@@ -63,7 +60,7 @@ In this project, we have crafted a webshop tailored for Codecoolers. This online
 
 <div id="built-with"></div>
 
-### Built With
+### Built With :wrench:
 
 
 * [![JavaScript][JavaScript.img]][JavaScript-url]
@@ -75,12 +72,12 @@ In this project, we have crafted a webshop tailored for Codecoolers. This online
 
 <!-- GETTING STARTED -->
 <div id="getting-started"></div>
-<!-- CONTINUE FROM HERE ------------------------------------------->
-## Getting Started
+
+## Getting Started :arrow_forward:	
 
 <div id="prerequisites"></div>
 
-### Prerequisites
+### Prerequisites :ballot_box_with_check:	
 To run this project, you need to have the following:
 
 Node Package Manager (npm) – if you don’t have it, run the following command in your terminal:
@@ -93,11 +90,11 @@ optional – Visual Studio Code  - you can open the project in this, but not man
 
 <div id="installation"></div>
 
-### Installation
+### Installation :floppy_disk:	
 
 1. Clone the repository to your local machine
    ```sh
-   git clone https://github.com/CodecoolGlobal/react-for-a-cause-react-esicsordas.git
+   git clone https://github.com/CodecoolGlobal/pizza-order-prototype-javascript-esicsordas.git
    ```
 3. Install NPM packages
    ```sh
@@ -105,7 +102,7 @@ optional – Visual Studio Code  - you can open the project in this, but not man
    ```
 4. Start the program
    ```sh
-   npm start
+   npm run devStart
    ```
 5. The website runs in the browser, on the
    ```sh
@@ -119,9 +116,9 @@ optional – Visual Studio Code  - you can open the project in this, but not man
 <!-- USAGE EXAMPLES -->
 <div id="usage"></div>
 
-## Usage
+## Usage :joystick:	
 
-In this project, you can find information about the organization, send message or donate.
+This is a webshop simulation, so you can select the amount of the potions you want to buy, fill the buyer information on the top of the page, and with the submit button, you can also send your order. You can also select the ingredients you want to avoid on the top of the page, and the potions that contain the selected ingredient, will be unavailable.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,18 +127,18 @@ In this project, you can find information about the organization, send message o
 <!-- CONTRIBUTING -->
 <div id="contributing"></div>
 
-## Contributing
+## Contributing :people_holding_hands:	
 
-In this project, there were 3 junior developers from Codecool: Csordás Emese, Toma Tamás and Péterfi László.
+In this project, there were 3 junior developers from Codecool: Csordás Emese, Toma Tamás and Tóth-Mátrai Boróka.
 <br />
 <br />
-**Emese** worked mostly on the css, and the Contact component.
+:heavy_check_mark:	**Emese** worked mostly on displaying the elements and the css.
 <br />
 <br />
-**Tamás** worked mostly on the Donate and About components.
+:heavy_check_mark:	**Tamás** worked mostly on sending the incoming data to backend and displaying it.
 <br />
 <br />
-**László** worked mostly on the main page, and the conditional rendering.
+:heavy_check_mark:	**Boróka** worked mostly on theallergen filtering feature and the css.
 <br />
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -154,11 +151,11 @@ In this project, there were 3 junior developers from Codecool: Csordás Emese, T
 
 ## Contact
 
-**Emese** - cs.esi963@gmail.com
+:envelope:	**Emese** - cs.esi963@gmail.com &nbsp;&nbsp;&nbsp;&nbsp; :point_right: &nbsp;&nbsp;&nbsp;&nbsp; [![Emese's LinkedIn][linkedin-shield]][LinkedIn - Emese]
 
-**Tamás** - tomatams@gmail.com
+:envelope:	**Tamás** - tomatams@gmail.com  &nbsp;&nbsp;&nbsp;&nbsp; :point_right: &nbsp;&nbsp;&nbsp;&nbsp; [![Tamás's LinkedIn][linkedin-shield]][LinkedIn - Tamás]
 
-**László** - peterfi.laci.0325@gmail.com
+:envelope:	**Boróka** - tmboroka@gmail.com &nbsp;&nbsp;&nbsp;&nbsp; :point_right: &nbsp;&nbsp;&nbsp;&nbsp; [![Boróka's LinkedIn][linkedin-shield]][LinkedIn - Boróka]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
